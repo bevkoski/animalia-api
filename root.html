@@ -1,0 +1,80 @@
+<!-- Page title -->
+<h1>ANIMALIA API</h2>
+
+
+<!-- Module functionalities -->
+<h3>Module functionalities</h3>
+
+<b>MODULES</b> '/modules'<br/>
+<em>lists all the available modules</em><br/>
+method: GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+url parameters: none&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return type: application/JSON<br/><br/>
+
+<b>MODULE</b> '/modules/:module'<br/>
+<em>displays info for the selected module, including a spotlight animal and a list of all the animals</em><br/>
+method: GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+url parameters: MODULE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return type: application/JSON<br/>
+example: http://hcibiology.herokuapp.com/modules/Mammals<br/><br/>
+
+<b>ANIMALS</b> '/modules/:module/animals'<br/>
+<em>displays a list of the animals in the given module</em><br/>
+method: GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+url parameters: MODULE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return type: application/JSON<br/>
+example: http://hcibiology.herokuapp.com/modules/Mammals/animals<br/><br/>
+
+
+<!-- Animal functionalities -->
+<h3>Animal functionalities</h3>
+
+<b>ANIMALS</b> '/animals'<br/>
+<em>an index of all the animals</em><br/>
+method: GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+url parameters: none&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return type: application/JSON<br/><br/>
+
+<b>ANIMAL OF THE DAY</b> '/animals/aotd'<br/>
+<em>displays info for the animal of the day</em><br/>
+method: GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+url parameters: none&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return type: application/JSON<br/><br/>
+
+<b>ANIMAL</b> '/animals/animal/:id'<br/>
+<em>displays detailed info for an animal</em><br/>
+method: GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+url parameters: ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return type: application/JSON<br/>
+example: http://hcibiology.herokuapp.com/animals/5.1<br/><br/>
+
+
+<!-- Quiz functionalities -->
+<h3>Quiz functionalities</h3>
+
+<b>QUIZZES</b> '/quizzes'<br/>
+<em>lists all the available quizzes</em><br/>
+method: GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+url parameters: none&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return type: application/JSON<br/><br/>
+
+<b>QUIZ</b> '/quizzes/quiz/:quiz'<br/>
+<em>generates a quiz with 5 random questions from the given module</em><br/>
+method: GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+url parameters: QUIZ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return type: application/JSON<br/>
+example: http://hcibiology.herokuapp.com/quizzes/quiz/Mammals<br/><br/>
+
+<b>SUBMIT</b> '/quizzes/submit'<br/>
+<em>submits the results for a given quiz</em><br/>
+method: GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+url parameters: USERNAME, TYPE, GUESSES, TIME LEFT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return type: application/JSON<br/>
+example: http://hcibiology.herokuapp.com/quizzes/submit?username=usr85f77d9a06d220334e9e9f72b3250403&type=Expert&guesses=3&timeleft=25<br/><br/>
+
+<b>HIGH SCORES</b> '/quizzes/highscores/:list'<br/>
+<em>displays the high score lists</em><br/>
+method: GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+url parameters: LIST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return type: application/JSON<br/>
+example: http://hcibiology.herokuapp.com/quizzes/highscores/Total
